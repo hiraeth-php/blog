@@ -1,0 +1,58 @@
+@mixin group() {
+	&::after {
+		content: '';
+		display: table;
+		overflow: hidden;
+		clear: both;
+	}
+}
+
+@mixin contain($size:4, $gutter:0px, $el:"*", $float:left) {
+	@include group;
+
+	width: auto;
+	display: block;
+
+	& > #{$el} {
+		float: $float;
+		width: calc((100% - (#{$gutter} * (#{$size} - 1))) / #{$size});
+		margin-left: $gutter;
+		box-sizing: border-box;
+
+		&:nth-child(#{$size}n + 1) {
+			margin-left: 0;
+			clear: $float;
+		}
+	}
+}
+
+@mixin expand($color:transparent) {
+	width: auto;
+	background-color: $color;
+	margin-left: 0;
+	margin-right: 0;
+
+	> * {
+		width: $df-width;
+		margin-left: calc((100% - #{$df-width}) / 2);
+		margin-right: calc((100% - #{$df-width}) / 2);
+
+		@media (min-width: $md-width) {
+			width: $sm-width;
+			margin-left: calc((100% - #{$sm-width}) / 2);
+			margin-right: calc((100% - #{$sm-width}) / 2);
+		}
+
+		@media (min-width: $lg-width) {
+			width: $md-width;
+			margin-left: calc((100% - #{$md-width}) / 2);
+			margin-right: calc((100% - #{$md-width}) / 2);
+		}
+
+		@media (min-width: $xl-width) {
+			width: $lg-width;
+			margin-left: calc((100% - #{$lg-width}) / 2);
+			margin-right: calc((100% - #{$lg-width}) / 2);
+		}
+	}
+}

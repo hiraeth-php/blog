@@ -1,0 +1,28 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set article = articles.find(request.attributes['slug']) %}
+
+{% if not article %}
+    {% do sys.error(404) %}
+{% else %}
+    {% set title   = article.title %}
+    {% set actions = {'edit': 'Edit this article', 'delete': 'Delete this article'} %}
+{% endif %}
+
+{% block content %}
+    <article>
+        <h1>{{ title }}</h1>
+
+        <div class="meta">
+            {{ article.datePublished|date('F j, Y') }}
+            {% if article.author %}
+                {% set author = users.find(article.author) %}
+                &mdash; {{ author.fullName }}
+            {% endif %}
+        </div>
+
+        {{ sys.messages.display() }}
+
+        {{ parsedown.text(article.body)|raw }}
+    </article>
+{% endblock %}

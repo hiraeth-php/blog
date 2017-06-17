@@ -1,0 +1,6 @@
+[application]
+delegates = [
+	"Hiraeth\\Guzzle\\ServerRequestDelegate",
+	"Hiraeth\\Guzzle\\ResponseDelegate",
+	"Hiraeth\\Guzzle\\StreamDelegate"
+]

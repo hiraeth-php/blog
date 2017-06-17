@@ -1,0 +1,17 @@
+{% extends '@layouts/full-width.html' %}
+
+{% block content %}
+    <section>
+        <h1>Login</h1>
+
+        {{ sys.messages.display() }}
+
+        <div class="messaging error">
+            <p>
+                You are forbidden from accessing this page.  Please try logging in to an account with the appropriate permissions.
+            </p>
+        </div>
+
+        {% include '@partials/login.html' %}
+    </section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set article = articles.find(request.attributes['slug']) %}
+
+{% if not article %}
+    {% do sys.error(404) %}
+{% elseif not sys.user %}
+    {% do sys.error(403) %}
+{% elseif request.method == 'POST' and articles.delete(article) %}
+    {% do sys.redirect('/articles/') %}
+{% else %}
+    {% set title = 'Delete Article' %}
+{% endif %}
+
+{% block content %}
+    <section>
+        <h1>{{ title }}</h1>
+
+        {{ sys.messages.display() }}
+
+        <form method="post" action="{{ request.uri }}">
+            <p>
+                You are about to delete the article "{{ article.title }}" &mdash; are you sure you want to do this?
+            </p>
+            <p>
+                <button type="submit">Yes, Delete!</button>
+                <a href="/articles/{{ articles.slug(article) }}">No, Don't Delete</a>
+            </p>
+        </form>
+    </section>
+{% endblock %}

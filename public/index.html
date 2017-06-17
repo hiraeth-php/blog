@@ -1,0 +1,11 @@
+{% extends '@layouts/full-width.html' %}
+
+{% block content %}
+    <section>
+        <h1>Hiraeth</h1>
+
+        {{ sys.messages.display() }}
+
+        {{ parsedown.text(sys.read('README.md'))|raw }}
+    </section>
+{% endblock %}

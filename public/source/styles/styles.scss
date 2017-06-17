@@ -1,0 +1,343 @@
+@import "reset";
+@import "settings";
+@import "mixins";
+@import "pagination";
+
+html {
+	font-size: 10px;
+	font-family: 'Lato';
+	background-color: #222;
+}
+
+body {
+	position: relative;
+	font-size: $font-size;
+	font-weight: 300;
+	margin: 0;
+
+	> footer,
+	> main > * {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+
+	> header {
+		position: fixed;
+		z-index: 500;
+		width: 100%;
+		background-color: #fff;
+		color: #444;
+
+		&:hover nav {
+			> * {
+				opacity: 1;
+			}
+
+			&::before {
+				opacity: 0;
+			}
+		}
+
+		nav {
+			@include group;
+			text-transform: lowercase;
+			position: relative;
+
+			ul {
+				float: left;
+			}
+
+			.actions {
+				float: right;
+				margin-top: -.5em;
+			}
+
+			> * {
+				opacity: 0;
+				transition: opacity .5s;
+			}
+
+			&::before {
+				transition: opacity .25s;
+				font-family: FontAwesome;
+				content: '\f015';
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin: 1em 0;
+				z-index: -1;
+			}
+		}
+	}
+
+	> main  {
+		background-color: #fff;
+		color: #444;
+
+		> * {
+			opacity: .5;
+			transition: opacity .5s;
+		}
+
+		&:hover {
+			> * {
+				opacity: 1;
+			}
+		}
+	}
+
+	> footer {
+		text-align: center;
+		background-color: #222;
+		color: #777;
+		border-top: solid 2px #be3400;
+	}
+}
+
+body > * {
+	@include expand();
+}
+
+nav {
+	padding: 1em 0;
+
+	ul {
+		color: #888;
+		list-style-type: none;
+
+		li,
+		a {
+			margin-right: 1em;
+		}
+
+		li {
+			border-right: solid 1px #666;
+			display: inline-block;
+
+			&:last-child {
+				border: none;
+			}
+		}
+
+		a {
+			display: inline-block;
+			padding: 0;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Cardo;
+	font-size: 7.2rem;
+	text-align: center;
+	margin: 6rem 0 4rem;
+}
+
+section section h1, h2, h3, h4, h5, h6 {
+	font-size: 5.2rem;
+	text-align: left;
+	margin: 4rem 0 2rem;
+}
+
+section section section h1, h3, h4, h5, h6 {
+	font-size: 3.2rem;
+}
+
+
+p {
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-bottom: 1.5em;
+
+	li {
+		margin-bottom: .5em;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+p a {
+	color: #954121;
+	text-decoration-style:dashed;
+}
+
+pre {
+	margin-bottom: 1.5em;
+}
+
+code {
+	font-family: 'Source Code Pro';
+	font-size: 2rem;
+	color: #219161;
+	line-height: 1.5em;
+
+	pre & {
+		font-size: 1.6rem;
+		border: solid 1px #e6e6e6;
+	}
+}
+
+.messaging {
+	padding: 1em;
+	padding-left: 3em;
+	margin-bottom: 2em;
+	position: relative;
+	font-weight: bold;
+	border: solid 2px;
+
+	&::before {
+		font-family: FontAwesome;
+		position: absolute;
+		left: 1em;
+		line-height: 1.5em;
+		margin-right: .25em;
+	}
+
+	&.error {
+		color: #a61f1f;
+
+		&::before {
+			content: '\f06a';
+		}
+	}
+
+	.close {
+		display: none;
+	}
+}
+
+.article {
+	padding: 2em 0;
+	border-bottom: solid 1px #eee;
+
+	&:last-child {
+		border: none;
+	}
+
+	h1 {
+		font-size: 3rem;
+		margin-bottom: .5em;
+	}
+
+	.summary {
+		margin-bottom: .5em;
+	}
+
+	.author {
+		float: right;
+		font-style: italic;
+	}
+}
+
+article {
+	.meta {
+		text-align: right;
+		color: #888;
+		font-style: italic;
+		margin-bottom: 2em;
+	}
+}
+
+.actions {
+	a {
+		display: inline-block;
+		width: 2em;
+		height: 2em;
+		line-height: 2em;
+		border-radius: 1em;
+		overflow: hidden;
+		background-color: #444;
+		text-align: center;
+		color: #eee;
+
+		&::before {
+			font-family: FontAwesome;
+			display: block;
+			content: ' ';
+		}
+
+		&.add {
+			background-color: #74c876;
+
+			&::before {
+				content: '\f067';
+			}
+		}
+
+		&.add {
+			background-color: #74c876;
+
+			&::before {
+				content: '\f067';
+			}
+		}
+
+		&.edit {
+			background-color: #74a0c8;
+
+			&::before {
+				content: '\f040';
+			}
+		}
+
+		&.delete {
+			background-color: #c87474;
+
+			&::before {
+				content: '\f068';
+			}
+		}
+	}
+}
+
+form {
+	label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: .5em;
+		color: #999;
+		text-transform: uppercase;
+		font-size: .66em;
+	}
+
+	input:not([type=checkbox]),
+	textarea {
+		padding: .25em .5em;
+		font-family: inherit;
+		font-size: inherit;
+		border: none;
+		border-bottom: solid 1px #ddd;
+		width: 100%;
+		margin-bottom: 2em;
+
+		& + .error {
+			border: none;
+			padding: 0;
+			margin-top: -2.5em;
+			font-size: .66em;
+
+			&::before {
+				position: relative;
+				left: 0;
+			}
+		}
+	}
+
+	textarea {
+		border: none;
+		background-color: #f8f8f8;
+		padding: .5em;
+	}
+}

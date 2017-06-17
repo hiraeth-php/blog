@@ -1,0 +1,13 @@
+{% if errors %}
+    {% if errors|length > 1 %}
+        <ul class="messaging error">
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="messaging error">
+            {{ errors[0] }}
+        </div>
+    {% endif %}
+{% endif %}

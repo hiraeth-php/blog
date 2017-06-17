@@ -1,0 +1,13 @@
+; CSS classmap provides the CSS classes used (values) for the type of message (keys)
+
+clasmap = {
+	"ERROR": "error",
+	"WARNING": "warning",
+	"SUCCESS": "success",
+	"INFO": "info"
+}
+
+[application]
+providers = [
+	"Hiraeth\\Messages\\MessagesProvider"
+]

@@ -1,0 +1,8 @@
+; The locale to use for inflection (en, fr, ...)
+
+locale = en
+
+[application]
+delegates = [
+	"Hiraeth\\Inflector\\InflectorDelegate"
+]

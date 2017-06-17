@@ -1,0 +1,15 @@
+{% extends '@layouts/full-width.html' %}
+
+{% if request.method == 'POST' %}
+    {% do sys.login(users, request) %}
+{% endif %}
+
+{% block content %}
+    <section>
+        <h1>Login</h1>
+
+        {{ sys.messages.display() }}
+
+        {% include '@partials/login.html' %}
+    </section>
+{% endblock %}

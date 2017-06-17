@@ -4,7 +4,9 @@ delegates = [
 ]
 
 providers = [
-
+	"Hiraeth\\App\\RepositoryProvider",
+	"Hiraeth\\App\\RequestProvider",
+	"Hiraeth\\App\\TwigProvider"
 ]
 
 [server]

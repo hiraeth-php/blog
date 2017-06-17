@@ -1,0 +1,58 @@
+.pagination {
+	color: #39597d;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+
+	li {
+		display: inline-block;
+		line-height: 0;
+
+		&.active {
+			background-color: #39597d;
+
+			a {
+				color: #fff;
+			}
+		}
+
+	}
+
+	a {
+		display: inline-block;
+		overflow: hidden;
+		line-height: 4rem;
+		border: solid 1px;
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+
+	.disabled {
+		visibility: hidden;
+	}
+
+	.next,
+	.prev {
+		a {
+			border: none;
+			line-height: 3.5rem;
+
+			&::before {
+				display: inline;
+				font-family: FontAwesome;
+			}
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	.next a::before {
+		content: '\f04e';
+	}
+
+	.prev a::before {
+		content: '\f04a';
+	}
+}

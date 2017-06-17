@@ -1,0 +1,15 @@
+<label>Login</label>
+<input type="text" name="login" placeholder="username" value="{{ user.login }}" />
+{% include '@partials/checkpoint/errors.html' with {'errors': users.inspector.getMessages('login')} %}
+
+<label>What's your full name?</label>
+<input type="text" name="fullName" value="{{ user.fullName }}" />
+{% include '@partials/checkpoint/errors.html' with {'errors': users.inspector.getMessages('fullName')} %}
+
+<label>What should we call you?</label>
+<input type="text" name="nickName" value="{{ user.nickName }}" />
+{% include '@partials/checkpoint/errors.html' with {'errors': users.inspector.getMessages('nickName')} %}
+
+<label>Password</label>
+<input type="password" name="password" />
+{% include '@partials/checkpoint/errors.html' with {'errors': users.inspector.getMessages('password')} %}

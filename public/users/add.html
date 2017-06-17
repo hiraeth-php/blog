@@ -1,0 +1,39 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set user  = users.create() %}
+
+{% if request.attributes.slug %}
+    {% do sys.error(404) %}
+{% elseif sys.secure and not sys.user %}
+    {% do sys.error(403) %}
+{% elseif request.method == 'POST' and users.add(user, request) %}
+    {% if not sys.secure %}
+        {% do sys.login(users, request, '/') %}
+    {% else %}
+        {% do sys.redirect('/users/' ~ users.slug(user)) %}
+    {% endif %}
+{% else %}
+    {% set title = 'Add User' %}
+{% endif %}
+
+{% block content %}
+    <section>
+        <h1>{{ title }}</h1>
+        {% if not sys.secure %}
+            <div class="messaging warning">
+                <p>
+                    Your system is not secure.  Please create a user below to continue.
+                </p>
+            </div>
+        {% endif %}
+
+        {{ sys.messages.display() }}
+
+        <form method="post" action="{{ request.uri }}">
+
+            {% include '@partials/users/fields.html' %}
+
+            <button type="submit">Create</button>
+        </form>
+    </section>
+{% endblock %}

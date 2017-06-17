@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    {{ sys.setup(users, request) }}
+
+    <head>
+        <title>
+            Hiraeth
+            {% if title is defined %}
+                | {{ title }}
+            {% endif %}
+        </title>
+
+        <script src="https://use.fontawesome.com/ad2cf74c92.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Cardo|Lato:300|Source+Code+Pro" rel="stylesheet">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link rel="stylesheet" href="/assets/styles/styles.css" />
+    </head>
+    <body>
+        {% include '@partials/header.html' %}
+
+        {% block body %}
+        {% endblock %}
+
+        {% include '@partials/footer.html' %}
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</html>

@@ -1,0 +1,37 @@
+{
+	"app": {
+		"source": "public/source",
+		"target": "public/assets",
+		"index":  "components/index.html",
+
+		"assets": [
+			{
+				"source": "scripts",
+				"target": "scripts",
+				"filter": ["js", "images", "css"]
+			},
+			{
+				"source": "styles",
+				"target": "styles",
+				"filter": ["css", "sass"]
+			},
+			{
+				"source": "images",
+				"target": "images",
+				"filter": ["images"]
+			},
+			{
+				"source": "fonts",
+				"target": "fonts",
+				"filter": ["none"]
+			},
+			{
+				"source": "components",
+				"target": "components",
+				"filter": ["html"]
+			}
+		],
+
+		"sync": false
+	}
+}

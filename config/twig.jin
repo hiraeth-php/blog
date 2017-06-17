@@ -1,0 +1,36 @@
+; The character set to use
+charset = utf-8
+
+; Cache directory to store the compiled templates
+cache_path = "writable/cache/twig"
+
+; If true, twig will error when variables are not available
+strict = true
+
+[twig]
+paths = {
+	"pages": "public",
+	"layouts": "templates/layouts",
+	"partials": "templates/partials"
+;	"templates": "templates"
+}
+
+; Filters
+filters = {
+;	"md5": {
+;		"target": "md5",
+;		"options": {}
+;	}
+}
+
+[application]
+delegates = [
+	"Hiraeth\\Twig\\EnvironmentDelegate",
+	"Hiraeth\\Twig\\FilesystemLoaderDelegate"
+;	"Hiraeth\\Twig\\ChainLoaderDelegate",
+]
+
+[middleware]
+queue = [
+	"Hiraeth\\Twig\\RelayMiddleware"
+]

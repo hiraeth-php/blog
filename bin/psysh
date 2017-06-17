@@ -1,0 +1,26 @@
+<?php
+
+//
+// Track backwards until we discover our composer.json.
+//
+
+for (
+	$root_path  = __DIR__;
+	$root_path != '/' && !is_file($root_path . DIRECTORY_SEPARATOR . 'composer.json');
+	$root_path  = realpath($root_path . DIRECTORY_SEPARATOR . '..')
+);
+
+$loader  = require $root_path . '/vendor/autoload.php';
+$hiraeth = new Hiraeth\Application($root_path, $loader);
+
+exit($hiraeth->run(function(Psy\Shell $shell) {
+	$GLOBALS['_SESSION'] = array();
+
+	$shell->setScopeVariables([
+		'app'    => $this,
+		'broker' => $this->broker,
+		'config' => $this->config
+	]);
+
+	exit($shell->run());
+}));

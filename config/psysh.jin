@@ -1,0 +1,10 @@
+; A list of command classes
+
+commands = [
+
+]
+
+[application]
+delegates = [
+	"Hiraeth\\Psysh\\ConfigurationDelegate"
+]

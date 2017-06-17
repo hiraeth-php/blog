@@ -1,0 +1,47 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set title   = 'Articles' %}
+{% set actions = {'add': 'Add an article'} %}
+{% set results = articles.findLatest(10, request.queryParams['page'] is defined ? request.queryParams['page'] : 1) %}
+
+{% block content %}
+    <section>
+        <h1>{{ title }}</h1>
+
+        {{ sys.messages.display() }}
+
+        {% if results.data|length %}
+            <section class="articles">
+                {% for article in results.data %}
+                    {% set author = users.find(article.author) %}
+                    <div class="article">
+                        <h1><a href="/articles/{{ articles.slug(article) }}">{{ article.title }}</a></h1>
+
+                        {% if article.summary %}
+                            <div class="summary">
+                                {{ parsedown.text(article.summary)|raw }}
+                            </div>
+                        {% endif %}
+
+                        {% if author %}
+                            <div class="author">
+                                {{ author.fullName }}
+                            </div>
+                        {% endif %}
+
+                        <p>
+                            <a class="more" href="/articles/{{ articles.slug(article) }}">Read</a>
+                        </p>
+                    </div>
+                {% endfor %}
+            </section>
+            {% include '@partials/pagination.html' with {'pages': results.pages, 'page': results.page} %}
+        {% else %}
+            <div class="messaging info">
+                <p>
+                    We don't have any articles yet.
+                </p>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

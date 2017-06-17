@@ -1,0 +1,16 @@
+<label>Title</label>
+<input type="text" name="title" value="{{ article.title }}" />
+{% include '@partials/checkpoint/errors.html' with {'errors': articles.inspector.getMessages('title')} %}
+
+<label>Date Published</label>
+<input type="text" name="datePublished" value="{{ article.datePublished }}" />
+{% include '@partials/checkpoint/errors.html' with {'errors': articles.inspector.getMessages('datePublished')} %}
+
+<label>Summary</label>
+<textarea cols="80" rows="2" name="summary">{{ article.summary }}</textarea>
+{% include '@partials/checkpoint/errors.html' with {'errors': articles.inspector.getMessages('summary')} %}
+
+
+<label>Body</label>
+<textarea cols="80" rows="20" name="body">{{ article.body }}</textarea>
+{% include '@partials/checkpoint/errors.html' with {'errors': articles.inspector.getMessages('body')} %}

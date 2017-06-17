@@ -1,0 +1,16 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/articles/">Articles</a></li>
+        </ul>
+
+        {% if sys.user and actions is defined %}
+            <div class="actions">
+                {% for action,title in actions %}
+                    <a class="{{ action }}" href="?action={{ action }}" title="{{ title }}">{{ action|title }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </nav>
+</header>
