@@ -1,6 +1,5 @@
 .env
 vendor
 public/assets
-composer.lock
 node_modules
 opus.map
