@@ -312,6 +312,10 @@ abstract class AbstractRepository implements RepositoryInterface, Countable
 				continue;
 			}
 
+			if (!is_string($value)) {
+				$value = json_encode($value);
+			}
+
 			$data .= sprintf('%s = %s' . PHP_EOL, $property, $value);
 		}
 
