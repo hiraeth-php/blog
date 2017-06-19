@@ -19,7 +19,8 @@
         "hiraeth/pb-messages": "^1.0",
         "hiraeth/guzzle-http": "^1.1",
         "hiraeth/icb-inflector": "^1.0",
-        "hiraeth/checkpoint": "^1.0"
+        "hiraeth/checkpoint": "^1.0",
+        "hiraeth/auth": "^1.0"
     },
     "autoload": {
         "classmap": ["local"]

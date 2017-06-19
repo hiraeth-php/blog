@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7fbe92d4c6ab1e58ab77102ea508657",
-    "content-hash": "0c1bf16446d686c2a4bb6c1526941a21",
+    "hash": "dcbe006935497aeb1c8efe7f2ced8a96",
+    "content-hash": "d14852269f7e8d1bfe21ebe65c986eaf",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -358,6 +358,50 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "hiraeth/auth",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/auth.git",
+                "reference": "fddda4c1bf0e2040867a0c1fbde42ea352ef39a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/auth/zipball/fddda4c1bf0e2040867a0c1fbde42ea352ef39a6",
+                "reference": "fddda4c1bf0e2040867a0c1fbde42ea352ef39a6",
+                "shasum": ""
+            },
+            "require": {
+                "imarc/auth": "^1.3"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/config": ""
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "RBAC/ACL auth for the Hiraeth Nano-Framework",
+            "time": "2017-06-19 03:14:43"
         },
         {
             "name": "hiraeth/checkpoint",
@@ -719,6 +763,62 @@
                 "underscore"
             ],
             "time": "2017-04-24 16:40:00"
+        },
+        {
+            "name": "imarc/auth",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imarc/auth.git",
+                "reference": "265f1e8bf7eb29b52eb434588bc77f8563f6b5bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imarc/auth/zipball/265f1e8bf7eb29b52eb434588bc77f8563f6b5bf",
+                "reference": "265f1e8bf7eb29b52eb434588bc77f8563f6b5bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "dotink/lab": "^1.2.0",
+                "dotink/parody": "^1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Turcotte",
+                    "email": "jeff@imarc.net",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "matt@imarc.net",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Brian Tam",
+                    "email": "brian@imarc.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "RBAC and ACLs",
+            "keywords": [
+                "acl",
+                "auth",
+                "rbac"
+            ],
+            "time": "2017-03-10 17:12:38"
         },
         {
             "name": "imarc/checkpoint",

@@ -2,10 +2,12 @@
 
 namespace Hiraeth\App;
 
+use iMarc\Auth\EntityInterface;
+
 /**
  *
  */
-class User extends AbstractEntity
+class User extends AbstractEntity implements EntityInterface
 {
 	/**
 	 *

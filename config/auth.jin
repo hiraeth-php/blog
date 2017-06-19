@@ -1,0 +1,23 @@
+[auth]
+
+; Aliases enable to combination of multiple permitted actions into a single action.  The key is the alias for the
+; actions and the value is an array of actions which it also permits.
+
+aliases = {
+;	"manage": ["create", "read", "update", "delete"]
+}
+
+; Access control lists.  Each entry in the acls list is keyed by the role.  The value is then an object containing
+; permitted actions (arrays of actions) for the keyed targets.
+
+acls = {
+;	"admin": {
+;		"User" : ["manage"]
+;	}
+}
+
+[application]
+providers = [
+	"Hiraeth\\Auth\\ManagerProvider",
+	"Hiraeth\\Auth\\ManagedInterfaceProvider"
+]

@@ -22,11 +22,18 @@ class TwigProvider
 	 */
 	public function __invoke($twig, Hiraeth\Broker $broker)
 	{
-		$twig->addGlobal('app', $broker->make('Hiraeth\Application'));
-		$twig->addGlobal('sys', $broker->make('Hiraeth\App\System'));
-		$twig->addGlobal('users', $broker->make('Hiraeth\App\Users'));
-		$twig->addGlobal('articles', $broker->make('Hiraeth\App\Articles'));
-		$twig->addGlobal('parsedown', $broker->make('Parsedown'));
+		$app       = $broker->make('Hiraeth\Application');
+		$sys       = $broker->make('Hiraeth\App\System');
+		$auth      = $broker->make('iMarc\Auth\Manager');
+		$users     = $broker->make('Hiraeth\App\Users');
+		$articles  = $broker->make('Hiraeth\App\Articles');
+		$parsedown = $broker->make('Parsedown');
+
+		$auth->setEntity($sys->getUser() ?: $users->create());
+
+		foreach (get_defined_vars() as $name => $value) {
+			$twig->addGlobal($name, $value);
+		}
 
 		return $twig;
 	}
