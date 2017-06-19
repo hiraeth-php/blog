@@ -49,6 +49,10 @@ class Users extends AbstractRepository
 			}
 		}
 
+		if (!isset($data['roles'])) {
+			$data['roles'] = array();
+		}
+
 		parent::fill($user, $data, $loading);
 	}
 }
