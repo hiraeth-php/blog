@@ -153,7 +153,7 @@ p {
 	}
 }
 
-ul {
+ul, ol {
 	list-style-type: disc;
 	list-style-position: inside;
 	margin-bottom: 1.5em;
@@ -161,6 +161,14 @@ ul {
 	li {
 		margin-bottom: .5em;
 	}
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+strong {
+	font-weight: bold;
 }
 
 a {
