@@ -3,9 +3,10 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/articles/">Articles</a></li>
+            <li><a href="/packages/">Packages</a></li>
         </ul>
 
-        {% if sys.user and actions is defined %}
+        {% if not auth.is('anonymous') and actions is defined %}
             <div class="actions">
                 {% for action,title in actions %}
                     <a class="{{ action }}" href="?action={{ action }}" title="{{ title }}">{{ action|title }}</a>

@@ -1,0 +1,21 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set package = packages.find(request.attributes['slug']) %}
+
+{% if not package %}
+    {% do sys.error(404) %}
+{% else %}
+    {% set title = package.name %}
+{% endif %}
+
+{% block content %}
+    <article>
+        <h1>{{ title }}</h1>
+
+        <p class="description">
+            {{ package.description }}
+        </p>
+
+        {{ parsedown.text(package.readme)|raw }}
+    </article>
+{% endblock %}

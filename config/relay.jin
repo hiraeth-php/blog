@@ -1,0 +1,11 @@
+[application]
+delegates = [
+	"Hiraeth\\Relay\\RunnerDelegate",
+	"Hiraeth\\Relay\\ResolverDelegate"
+]
+
+[middleware]
+queue = [
+	"Relay\\Middleware\\ResponseSender",
+	"Relay\\Middleware\\SessionHeadersHandler"
+]

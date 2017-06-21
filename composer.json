@@ -20,14 +20,18 @@
         "hiraeth/guzzle-http": "^1.1",
         "hiraeth/icb-inflector": "^1.0",
         "hiraeth/checkpoint": "^1.0",
-        "hiraeth/auth": "^1.0"
+        "hiraeth/auth": "^1.0",
+	"hiraeth/console": "^1.0",
+        "hiraeth/journey": "^1.0",
+        "hiraeth/monolog": "^1.0",
+        "hiraeth/relay": "^1.1"
     },
     "autoload": {
         "classmap": ["local"]
     },
     "extra": {
         "opus": {
-            "enabled": false,
+            "enabled": true,
             "options": {
                 "framework": "hiraeth/app"
             }

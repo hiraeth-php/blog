@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dcbe006935497aeb1c8efe7f2ced8a96",
-    "content-hash": "d14852269f7e8d1bfe21ebe65c986eaf",
+    "hash": "4e5525ef3cf5cfff299069491d925380",
+    "content-hash": "e7d7820ed09fdfe9b79d1195a1b4a59b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -192,6 +192,43 @@
             "time": "2017-06-08 08:42:18"
         },
         {
+            "name": "dotink/journey",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dotink/journey.git",
+                "reference": "6fc956d401dec1382b91c8ca2be752367dd3b593"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dotink/journey/zipball/6fc956d401dec1382b91c8ca2be752367dd3b593",
+                "reference": "6fc956d401dec1382b91c8ca2be752367dd3b593",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/fast-route": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Journey is a wrapper for FastRoute which supplies missing functionality",
+            "time": "2017-06-04 03:30:38"
+        },
+        {
             "name": "erusev/parsedown",
             "version": "1.6.2",
             "source": {
@@ -361,16 +398,16 @@
         },
         {
             "name": "hiraeth/auth",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/auth.git",
-                "reference": "fddda4c1bf0e2040867a0c1fbde42ea352ef39a6"
+                "reference": "4b9c97c4a3132cd03cc002d52338096213bd4fa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/auth/zipball/fddda4c1bf0e2040867a0c1fbde42ea352ef39a6",
-                "reference": "fddda4c1bf0e2040867a0c1fbde42ea352ef39a6",
+                "url": "https://api.github.com/repos/hiraeth-php/auth/zipball/4b9c97c4a3132cd03cc002d52338096213bd4fa6",
+                "reference": "4b9c97c4a3132cd03cc002d52338096213bd4fa6",
                 "shasum": ""
             },
             "require": {
@@ -401,20 +438,20 @@
                 }
             ],
             "description": "RBAC/ACL auth for the Hiraeth Nano-Framework",
-            "time": "2017-06-19 03:14:43"
+            "time": "2017-06-21 03:07:51"
         },
         {
             "name": "hiraeth/checkpoint",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/checkpoint.git",
-                "reference": "04f9083e9ab59d719abf38b6f7d59a4ac9f504e9"
+                "reference": "fe70688bf6903d3685b9a4c61b5b006518636aa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/checkpoint/zipball/04f9083e9ab59d719abf38b6f7d59a4ac9f504e9",
-                "reference": "04f9083e9ab59d719abf38b6f7d59a4ac9f504e9",
+                "url": "https://api.github.com/repos/hiraeth-php/checkpoint/zipball/fe70688bf6903d3685b9a4c61b5b006518636aa4",
+                "reference": "fe70688bf6903d3685b9a4c61b5b006518636aa4",
                 "shasum": ""
             },
             "require": {
@@ -445,20 +482,60 @@
                 }
             ],
             "description": "Checkpoint for the Hiraeth Nano-Framework",
-            "time": "2017-06-12 00:27:39"
+            "time": "2017-06-21 03:22:48"
         },
         {
-            "name": "hiraeth/core",
-            "version": "1.1.1",
+            "name": "hiraeth/console",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hiraeth-php/core.git",
-                "reference": "d28045fb293452758cb354f29e4590f5a44e60ef"
+                "url": "https://github.com/hiraeth-php/console.git",
+                "reference": "82df3a8b6bee1fc380c480b21acc817f3ee7aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/d28045fb293452758cb354f29e4590f5a44e60ef",
-                "reference": "d28045fb293452758cb354f29e4590f5a44e60ef",
+                "url": "https://api.github.com/repos/hiraeth-php/console/zipball/82df3a8b6bee1fc380c480b21acc817f3ee7aae9",
+                "reference": "82df3a8b6bee1fc380c480b21acc817f3ee7aae9",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "^3.3"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/bin": "",
+                        "plugin/config": ""
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Console commands for the Hiraeth Nano-Framework",
+            "time": "2017-06-21 03:35:30"
+        },
+        {
+            "name": "hiraeth/core",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/core.git",
+                "reference": "2a4347cc3fff3dd6898597c3e37fb88edf42f6a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/2a4347cc3fff3dd6898597c3e37fb88edf42f6a6",
+                "reference": "2a4347cc3fff3dd6898597c3e37fb88edf42f6a6",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +562,7 @@
                 }
             ],
             "description": "Core classes for the Hiraeth Nano-Framework",
-            "time": "2017-06-08 09:16:53"
+            "time": "2017-06-21 08:46:55"
         },
         {
             "name": "hiraeth/guzzle-http",
@@ -574,6 +651,96 @@
             ],
             "description": "ICanBoogie Inflector for the Hiraeth Nano-Framework",
             "time": "2017-06-08 04:29:53"
+        },
+        {
+            "name": "hiraeth/journey",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/journey.git",
+                "reference": "a11036a3961d50b31475ff027522b802f1c7d1f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/journey/zipball/a11036a3961d50b31475ff027522b802f1c7d1f9",
+                "reference": "a11036a3961d50b31475ff027522b802f1c7d1f9",
+                "shasum": ""
+            },
+            "require": {
+                "dotink/journey": "^1.0",
+                "hiraeth/core": "^1.1",
+                "hiraeth/icb-inflector": "^1.0"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/config": ""
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Journey for the Hiraeth Nano-Framework",
+            "time": "2017-06-08 04:35:07"
+        },
+        {
+            "name": "hiraeth/monolog",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/monolog.git",
+                "reference": "c33a8ca24b531e4faaf30923d5b8bee08a503079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/monolog/zipball/c33a8ca24b531e4faaf30923d5b8bee08a503079",
+                "reference": "c33a8ca24b531e4faaf30923d5b8bee08a503079",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.22"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/config": ""
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Monolog for the Hiraeth Nano-Framework",
+            "time": "2017-05-30 01:11:39"
         },
         {
             "name": "hiraeth/pb-messages",
@@ -665,20 +832,68 @@
             "time": "2017-06-11 08:29:46"
         },
         {
-            "name": "hiraeth/twig",
-            "version": "1.2.1",
+            "name": "hiraeth/relay",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hiraeth-php/twig.git",
-                "reference": "69dc034d351fc2830fade8860344d470dd5844f6"
+                "url": "https://github.com/hiraeth-php/relay.git",
+                "reference": "7781b982efd89feca1e777dcf4b8034765093e05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/69dc034d351fc2830fade8860344d470dd5844f6",
-                "reference": "69dc034d351fc2830fade8860344d470dd5844f6",
+                "url": "https://api.github.com/repos/hiraeth-php/relay/zipball/7781b982efd89feca1e777dcf4b8034765093e05",
+                "reference": "7781b982efd89feca1e777dcf4b8034765093e05",
                 "shasum": ""
             },
             "require": {
+                "relay/middleware": "^1.2",
+                "relay/relay": "^1.1"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/config": "",
+                        "plugin/public": "",
+                        "plugin/public/.index-relay.php": "public"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Relay for the Hiraeth Nano-Framework",
+            "time": "2017-06-10 23:27:52"
+        },
+        {
+            "name": "hiraeth/twig",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/twig.git",
+                "reference": "766eac5b42b698308162ab452ca0b798e6c5e742"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/766eac5b42b698308162ab452ca0b798e6c5e742",
+                "reference": "766eac5b42b698308162ab452ca0b798e6c5e742",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
                 "psr/http-message": "^1.0",
                 "twig/twig": "^2.4"
             },
@@ -710,7 +925,7 @@
                 }
             ],
             "description": "Twig for the Hiraeth Nano-Framework",
-            "time": "2017-06-17 05:02:56"
+            "time": "2017-06-21 08:47:52"
         },
         {
             "name": "icanboogie/inflector",
@@ -1001,6 +1216,127 @@
             "time": "2015-04-20 18:58:01"
         },
         {
+            "name": "monolog/monolog",
+            "version": "1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2017-06-19 01:22:40"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "b5f95749071c82a8e0f58586987627054400cdf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/b5f95749071c82a8e0f58586987627054400cdf6",
+                "reference": "b5f95749071c82a8e0f58586987627054400cdf6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2017-01-19 11:35:12"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "v3.0.5",
             "source": {
@@ -1192,16 +1528,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.6",
+            "version": "v0.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "7028d6d525fb183d50b249b7c07598e3d386b27d"
+                "reference": "be969b9dc89dcaefdb9a3117fa91fa38bca19f50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7028d6d525fb183d50b249b7c07598e3d386b27d",
-                "reference": "7028d6d525fb183d50b249b7c07598e3d386b27d",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/be969b9dc89dcaefdb9a3117fa91fa38bca19f50",
+                "reference": "be969b9dc89dcaefdb9a3117fa91fa38bca19f50",
                 "shasum": ""
             },
             "require": {
@@ -1261,7 +1597,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-04 10:34:20"
+            "time": "2017-06-20 12:51:31"
         },
         {
             "name": "rdlowrey/auryn",
@@ -1323,6 +1659,85 @@
                 "ioc"
             ],
             "time": "2017-05-15 06:26:46"
+        },
+        {
+            "name": "relay/middleware",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relayphp/Relay.Middleware.git",
+                "reference": "7ae2a923239e0de544869526a30f873990557aff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relayphp/Relay.Middleware/zipball/7ae2a923239e0de544869526a30f873990557aff",
+                "reference": "7ae2a923239e0de544869526a30f873990557aff",
+                "shasum": ""
+            },
+            "require": {
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relay\\Middleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Relay-compatible middleware decorators.",
+            "homepage": "https://github.com/relayphp/Relay.Middleware",
+            "time": "2016-12-07 16:45:53"
+        },
+        {
+            "name": "relay/relay",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relayphp/Relay.Relay.git",
+                "reference": "e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relayphp/Relay.Relay/zipball/e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae",
+                "reference": "e835fc45351b7a92a6fdf2a36be7bd59ef56c8ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Relay.Relay Contributors",
+                    "homepage": "https://github.com/relayphp/Relay.Relay/contributors"
+                }
+            ],
+            "description": "A PSR-7 middleware dispatcher.",
+            "homepage": "https://github.com/relayphp/Relay.Relay",
+            "keywords": [
+                "middleware",
+                "psr-7"
+            ],
+            "time": "2015-12-17 18:18:30"
         },
         {
             "name": "respect/validation",

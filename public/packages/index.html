@@ -1,0 +1,35 @@
+{% extends '@layouts/full-width.html' %}
+
+{% set title   = 'Packages' %}
+{% set results = packages.findAll() %}
+
+{% block content %}
+    <section>
+        <h1>{{ title }}</h1>
+
+        {{ sys.messages.display() }}
+
+        {% if results.data|length %}
+            <section class="docs">
+                {% for package in results.data %}
+                    <div class="article">
+                        <h1><a href="/packages/{{ packages.slug(package) }}">{{ package.name }}</a></h1>
+
+                        {% if package.description %}
+                            <p class="description">
+                                {{ package.description }}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </section>
+            {% include '@partials/pagination.html' with {'pages': results.pages, 'page': results.page} %}
+        {% else %}
+            <div class="messaging info">
+                <p>
+                    We don't have any packages yet.
+                </p>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

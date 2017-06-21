@@ -1,0 +1,7 @@
+[application]
+delegates = [
+	"Hiraeth\\Monolog\\LoggerDelegate"
+]
+
+[handlers]
+file = writable/logs/app.log

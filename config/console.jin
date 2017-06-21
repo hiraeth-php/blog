@@ -1,0 +1,8 @@
+[console]
+
+; Add symfony/console compatible commands to the list below and they will be executable via the `bin/hiraeth`
+; application runner.
+
+commands = [
+;	"Acme\\Foo\\BarCommand"
+]

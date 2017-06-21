@@ -27,6 +27,7 @@ class TwigProvider
 		$auth      = $broker->make('iMarc\Auth\Manager');
 		$users     = $broker->make('Hiraeth\App\Users');
 		$articles  = $broker->make('Hiraeth\App\Articles');
+		$packages  = $broker->make('Hiraeth\App\Packages');
 		$parsedown = $broker->make('Parsedown');
 
 		$auth->setEntity($sys->getUser() ?: $users->create());
