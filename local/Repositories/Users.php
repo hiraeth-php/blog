@@ -31,7 +31,7 @@ class Users extends AbstractRepository
 	 */
 	public function getSlug(AbstractEntity $user)
 	{
-		return $this->system->getInflector()->hyphenate(preg_replace('#[^a-zA-Z0-9]#', '', ucwords($user)));
+		return $this->system->getInflector()->hyphenate($user);
 	}
 
 

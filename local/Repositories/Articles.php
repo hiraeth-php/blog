@@ -54,7 +54,7 @@ class Articles extends AbstractRepository
 	 */
 	public function getSlug(AbstractEntity $article)
 	{
-		$name  = $this->system->getInflector()->hyphenate(preg_replace('#[^a-zA-Z0-9]#', '', ucwords($article)));
+		$name  = $this->system->getInflector()->hyphenate($article);
 		$date  = strtotime($article->datePublished);
 		$year  = date('Y', $date);
 		$month = date('m', $date);
