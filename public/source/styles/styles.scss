@@ -6,7 +6,7 @@
 html {
 	font-size: 10px;
 	font-family: 'Lato';
-	background-color: #222;
+	background-color: $dark;
 }
 
 body {
@@ -26,7 +26,8 @@ body {
 		z-index: 500;
 		width: 100%;
 		background-color: #fff;
-		color: #444;
+		color: $red;
+		border-bottom: solid 5px $red;
 
 		&:hover nav {
 			> * {
@@ -47,6 +48,24 @@ body {
 				float: left;
 			}
 
+			.social {
+				a {
+					&::before {
+						vertical-align:bottom;
+						font-family: FontAwesome;
+						margin-right: 1rem;
+					}
+
+					&.github::before {
+						content: '\f09b';
+					}
+
+					&.gitter::before {
+						content: '\f27b';
+					}
+				}
+			}
+
 			.actions {
 				float: right;
 				margin-top: -.5em;
@@ -60,7 +79,7 @@ body {
 			&::before {
 				transition: opacity .25s;
 				font-family: FontAwesome;
-				content: '\f015';
+				content: '\f0c9';
 				position: absolute;
 				left: 0;
 				top: 0;
@@ -72,25 +91,13 @@ body {
 
 	> main  {
 		background-color: #fff;
-		color: #444;
-
-		> * {
-			opacity: .5;
-			transition: opacity .5s;
-		}
-
-		&:hover {
-			> * {
-				opacity: 1;
-			}
-		}
+		color: #222;
 	}
 
 	> footer {
 		text-align: center;
-		background-color: #222;
 		color: #777;
-		border-top: solid 2px #be3400;
+		border-top: solid 5px $green;
 	}
 }
 
@@ -102,8 +109,8 @@ nav {
 	padding: 1em 0;
 
 	ul {
-		color: #888;
 		list-style-type: none;
+		margin-bottom: 0;
 
 		li,
 		a {
@@ -112,6 +119,7 @@ nav {
 
 		li {
 			border-right: solid 1px #666;
+			margin-bottom: 0;
 			display: inline-block;
 
 			&:last-child {
@@ -127,7 +135,6 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: Cardo;
 	font-size: 7.2rem;
 	text-align: center;
 	margin: 6rem 0 4rem;
@@ -150,6 +157,10 @@ p {
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	a {
+		color: $red;
 	}
 }
 
@@ -176,25 +187,47 @@ a {
 	text-decoration: none;
 }
 
-p a {
-	color: #954121;
-	text-decoration-style:dashed;
-}
-
 pre {
 	margin-bottom: 1.5em;
 }
 
 code {
 	font-family: 'Source Code Pro';
-	font-size: 2rem;
-	color: #219161;
+	font-size: .95em;
+	color: $green;
 	line-height: 1.5em;
 
 	pre & {
 		font-size: 1.6rem;
 		border: solid 1px #e6e6e6;
 	}
+}
+
+
+table {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+th {
+	font-weight: bold;
+	border: solid 1px #222;
+}
+
+th,
+td {
+	vertical-align: top;
+	padding: .5em;
+	border: dotted 1px #222;
+	text-align: left;
+}
+
+th {
+	border: solid 1px #888;
+}
+
+tfoot td {
+	border: none;
 }
 
 .messaging {
@@ -268,6 +301,7 @@ article {
 		overflow: hidden;
 		background-color: #444;
 		text-align: center;
+		margin-bottom: -1em;
 		color: #eee;
 
 		&::before {
