@@ -1,7 +1,9 @@
 <?php
 
-use Hiraeth\Twig\PageHandler;
+use Hiraeth\Twig\RequestResolver;
 use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\StreamInterface as Stream;
 
 //
 // Track backwards until we discover our composer.json.
@@ -16,45 +18,55 @@ for (
 $loader  = require $root_path . '/vendor/autoload.php';
 $hiraeth = new Hiraeth\Application($root_path, $loader);
 
-exit($hiraeth->run(function(PageHandler $handler, Request $request = NULL) {
-	try {
-		if (!$request) {
-			$path    = $_SERVER['REQUEST_URI'];
-			$context = [];
-		} else {
-			if (isset($request->getAttributes()['file'])) {
-				$path = $request->getAttributes()['file'];
-			} else {
-				$path = $request->getUri()->getPath();
-			}
+exit($hiraeth->run(function(RequestResolver $resolver, Request $request = NULL, Response $response = NULL, Stream $stream = NULL) {
+	if (!$request) {
+		$result = $resolver();
 
-			$context = [
-				'request' => $request
-			];
-		}
+	} elseif ($response) {
+		if ($stream) {
+			$result = $resolver($request, $response->withBody($stream));
 
-		if ($template = $handler->load($path)) {
-			if ($handler->isRedirect()) {
-				header('HTTP/1.1 301 Moved Permanently');
-				header('Location: ' . $path . '/');
-				exit();
-			}
-
-			echo $handler->render($template, $context);
+		} elseif ($response->getBody()) {
+			$result = $resolver($request, $response);
 
 		} else {
-			header('HTTP/1.1 404 Not Found');
-			echo 'Requested page could not be found';
+			$result = $resolver($request);
 		}
 
-	} catch (Exception $e) {
-		if ($this->getEnvironment('DEBUG')) {
-			throw $e;
+	} else {
+		$result = $resolver($request);
+	}
+
+	if ($result instanceof Response) {
+		$result->getBody()->rewind();
+
+		header(sprintf(
+			'HTTP/%s %s %s',
+			$result->getProtocolVersion(),
+			$result->getStatusCode(),
+			$result->getReasonPhrase()
+		));
+
+		foreach ($result->getHeaders() as $name => $values) {
+			$name = str_replace(' ', '-', ucwords(str_replace('-', ' ', $name)));
+
+			foreach ($values as $value) {
+				header(sprintf('%s: %s', $name, $value), FALSE);
+			}
 		}
 
-		header('HTTP/1.1 500 Internal Server Error');
-		echo 'Request cannot be completed at this time, please try again later.';
+		while (!$result->getBody()->eof()) {
+			echo $result->getBody()->read(8192);
+		}
 
-		return 1;
+		return [
+			200 => 0,
+			301 => 3,
+			404 => 4,
+			500 => 5,
+		][$result->getStatusCode()];
+
+	} else {
+		return $result;
 	}
 }));

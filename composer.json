@@ -15,7 +15,7 @@
         "hiraeth/core": "^1.0",
         "erusev/parsedown": "^1.6",
         "hiraeth/psysh": "^1.0",
-        "hiraeth/twig": "^1.2",
+        "hiraeth/twig": "^1.3",
         "hiraeth/pb-messages": "^1.0",
         "hiraeth/guzzle-http": "^1.1",
         "hiraeth/icb-inflector": "^1.0",
