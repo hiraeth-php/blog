@@ -5,17 +5,21 @@
 {% if not package %}
     {% do sys.error(404) %}
 {% else %}
-    {% set title = package.name %}
+    {% set title = package.description %}
 {% endif %}
 
 {% block content %}
     <article>
-        <h1>{{ title }}</h1>
+        <h1>{{ package.name }}</h1>
 
-        <p class="description">
-            {{ package.description }}
-        </p>
-
-        {{ parsedown.text(package.readme)|raw }}
+        {% if package.readme %}
+            {{ parsedown.text(package.readme)|raw }}
+        {% else %}
+            <div class="messaging info">
+                <p>
+                    This package doesn't have a README yet.  Perhaps you'd like to write one?
+                </p>
+            </div>
+        {% endif %}
     </article>
 {% endblock %}
