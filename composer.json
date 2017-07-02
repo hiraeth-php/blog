@@ -24,7 +24,8 @@
 	"hiraeth/console": "^1.0",
         "hiraeth/journey": "^1.0",
         "hiraeth/monolog": "^1.0",
-        "hiraeth/relay": "^1.1"
+        "hiraeth/relay": "^1.1",
+        "hiraeth/adr": "^1.0"
     },
     "autoload": {
         "classmap": ["local"]

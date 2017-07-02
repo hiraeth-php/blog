@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3b485681a5b4abfd2fd37b00fb6ce71a",
-    "content-hash": "d1964d080fd16cf6c8d420393d732cb7",
+    "hash": "7b98ad24fc1c8e0548d3f644c784e5ca",
+    "content-hash": "28e32d304d53a4ec4889c554d54474d9",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -395,6 +395,45 @@
                 "url"
             ],
             "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "hiraeth/adr",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/adr.git",
+                "reference": "e45202bea3d45a1c858671cd6c3b1cf67f2a5281"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/adr/zipball/e45202bea3d45a1c858671cd6c3b1cf67f2a5281",
+                "reference": "e45202bea3d45a1c858671cd6c3b1cf67f2a5281",
+                "shasum": ""
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": []
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "Action-Domain-Responder baseline for the Hiraeth Nano-Framework",
+            "time": "2017-07-02 02:19:28"
         },
         {
             "name": "hiraeth/auth",
