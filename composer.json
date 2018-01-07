@@ -9,6 +9,7 @@
             "role":  "Lead Architect / Developer"
         }
     ],
+    "repositories": [{"type":"vcs","url":"/home/matt/Dropbox/Code/dotink/journey"}],
     "require": {
         "php": ">=5.6.0",
         "imarc/opus": "^1.0.5",
@@ -25,7 +26,9 @@
         "hiraeth/journey": "^1.0",
         "hiraeth/monolog": "^1.0",
         "hiraeth/relay": "^1.1",
-        "hiraeth/adr": "^1.0"
+        "hiraeth/adr": "^1.0",
+        "hiraeth/htmlpurifier": "^1.0",
+	"dotink/journey": "dev-master as 1.9"
     },
     "autoload": {
         "classmap": ["local"]

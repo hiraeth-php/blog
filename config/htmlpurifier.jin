@@ -1,0 +1,26 @@
+; The location to store serialized purifier information.  This is essentially a cache.
+
+cache_path = writable/cache/htmlpurifier
+
+; Whether or not we should remove empty elements.  Note that if this is set to true, elements containing only
+; non-breaking space characters will also be removed.
+
+remove_empty = true
+
+; Whether or not the HTML we're purifying should be considered trusted.
+
+trusted = true
+
+; Forbidden HTML (attributes, elements, classes)
+
+forbidden = {
+	"attributes": [],
+	"elements": [],
+	"classes": []
+}
+
+[application]
+
+delegates = [
+	"Hiraeth\\HTMLPurifier\\HTMLPurifierDelegate"
+]

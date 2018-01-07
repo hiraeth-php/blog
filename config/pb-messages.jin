@@ -1,6 +1,6 @@
 ; CSS classmap provides the CSS classes used (values) for the type of message (keys)
 
-clasmap = {
+classmap = {
 	"ERROR": "error",
 	"WARNING": "warning",
 	"SUCCESS": "success",

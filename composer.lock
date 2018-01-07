@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7b98ad24fc1c8e0548d3f644c784e5ca",
-    "content-hash": "28e32d304d53a4ec4889c554d54474d9",
+    "hash": "dd64e329abf6e6c6e0cd4606d10023a4",
+    "content-hash": "e2160476faf5ae514c61a7daef7df790",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -193,17 +193,11 @@
         },
         {
             "name": "dotink/journey",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dotink/journey.git",
-                "reference": "6fc956d401dec1382b91c8ca2be752367dd3b593"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dotink/journey/zipball/6fc956d401dec1382b91c8ca2be752367dd3b593",
-                "reference": "6fc956d401dec1382b91c8ca2be752367dd3b593",
-                "shasum": ""
+                "url": "/home/matt/Dropbox/Code/dotink/journey",
+                "reference": "0d58d24d3d6a5155be37e1ec4011d43dc0ad31fb"
             },
             "require": {
                 "nikic/fast-route": "^1.2"
@@ -214,7 +208,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -226,20 +219,20 @@
                 }
             ],
             "description": "Journey is a wrapper for FastRoute which supplies missing functionality",
-            "time": "2017-06-04 03:30:38"
+            "time": "2017-08-03 06:08:32"
         },
         {
             "name": "erusev/parsedown",
-            "version": "1.6.2",
+            "version": "1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "1bf24f7334fe16c88bf9d467863309ceaf285b01"
+                "reference": "728952b90a333b5c6f77f06ea9422b94b585878d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/1bf24f7334fe16c88bf9d467863309ceaf285b01",
-                "reference": "1bf24f7334fe16c88bf9d467863309ceaf285b01",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/728952b90a333b5c6f77f06ea9422b94b585878d",
+                "reference": "728952b90a333b5c6f77f06ea9422b94b585878d",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +261,54 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2017-03-29 16:04:15"
+            "time": "2017-05-14 14:47:48"
+        },
+        {
+            "name": "ezyang/htmlpurifier",
+            "version": "v4.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ezyang/htmlpurifier.git",
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/95e1bae3182efc0f3422896a3236e991049dac69",
+                "reference": "95e1bae3182efc0f3422896a3236e991049dac69",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "simpletest/simpletest": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
+                "files": [
+                    "library/HTMLPurifier.composer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Edward Z. Yang",
+                    "email": "admin@htmlpurifier.org",
+                    "homepage": "http://ezyang.com"
+                }
+            ],
+            "description": "Standards compliant HTML filter written in PHP",
+            "homepage": "http://htmlpurifier.org/",
+            "keywords": [
+                "html"
+            ],
+            "time": "2017-06-03 02:28:16"
         },
         {
             "name": "filp/whoops",
@@ -398,22 +438,24 @@
         },
         {
             "name": "hiraeth/adr",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/adr.git",
-                "reference": "e45202bea3d45a1c858671cd6c3b1cf67f2a5281"
+                "reference": "923a3eddd2a216727cb6629e0c555857722ab4e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/adr/zipball/e45202bea3d45a1c858671cd6c3b1cf67f2a5281",
-                "reference": "e45202bea3d45a1c858671cd6c3b1cf67f2a5281",
+                "url": "https://api.github.com/repos/hiraeth-php/adr/zipball/923a3eddd2a216727cb6629e0c555857722ab4e8",
+                "reference": "923a3eddd2a216727cb6629e0c555857722ab4e8",
                 "shasum": ""
             },
             "type": "opus-package",
             "extra": {
                 "opus": {
-                    "hiraeth/app": []
+                    "hiraeth/app": {
+                        "plugin/config": ""
+                    }
                 }
             },
             "autoload": {
@@ -432,8 +474,8 @@
                     "role": "Lead Architect / Developer"
                 }
             ],
-            "description": "Action-Domain-Responder baseline for the Hiraeth Nano-Framework",
-            "time": "2017-07-02 02:19:28"
+            "description": "Acton-Domain-Responder baseline for the Hiraeth Nano-Framework",
+            "time": "2017-07-27 18:38:22"
         },
         {
             "name": "hiraeth/auth",
@@ -565,16 +607,16 @@
         },
         {
             "name": "hiraeth/core",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/core.git",
-                "reference": "2a4347cc3fff3dd6898597c3e37fb88edf42f6a6"
+                "reference": "4691aecd24fd6ff86f562e97e67cd1fe70e96420"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/2a4347cc3fff3dd6898597c3e37fb88edf42f6a6",
-                "reference": "2a4347cc3fff3dd6898597c3e37fb88edf42f6a6",
+                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/4691aecd24fd6ff86f562e97e67cd1fe70e96420",
+                "reference": "4691aecd24fd6ff86f562e97e67cd1fe70e96420",
                 "shasum": ""
             },
             "require": {
@@ -601,7 +643,7 @@
                 }
             ],
             "description": "Core classes for the Hiraeth Nano-Framework",
-            "time": "2017-06-21 08:46:55"
+            "time": "2017-08-01 08:20:00"
         },
         {
             "name": "hiraeth/guzzle-http",
@@ -646,6 +688,50 @@
             ],
             "description": "Guzzle PSR7 for the Hiraeth Nano-Framework",
             "time": "2017-06-04 05:01:55"
+        },
+        {
+            "name": "hiraeth/htmlpurifier",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hiraeth-php/htmlpurifier.git",
+                "reference": "2094d307ca225b8f2072bdb5bb4fc21326918b73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hiraeth-php/htmlpurifier/zipball/2094d307ca225b8f2072bdb5bb4fc21326918b73",
+                "reference": "2094d307ca225b8f2072bdb5bb4fc21326918b73",
+                "shasum": ""
+            },
+            "require": {
+                "ezyang/htmlpurifier": "^4.9"
+            },
+            "type": "opus-package",
+            "extra": {
+                "opus": {
+                    "hiraeth/app": {
+                        "plugin/config": ""
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew J. Sahagian",
+                    "email": "msahagian@dotink.org",
+                    "role": "Lead Architect / Developer"
+                }
+            ],
+            "description": "HTMLPurifier for the Hiraeth Nano-Framework",
+            "time": "2017-08-01 08:26:05"
         },
         {
             "name": "hiraeth/icb-inflector",
@@ -693,20 +779,20 @@
         },
         {
             "name": "hiraeth/journey",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/journey.git",
-                "reference": "fe2b6290bece505494d891f8934d86d8be8355c1"
+                "reference": "fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/journey/zipball/fe2b6290bece505494d891f8934d86d8be8355c1",
-                "reference": "fe2b6290bece505494d891f8934d86d8be8355c1",
+                "url": "https://api.github.com/repos/hiraeth-php/journey/zipball/fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f",
+                "reference": "fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f",
                 "shasum": ""
             },
             "require": {
-                "dotink/journey": "^1.0",
+                "dotink/journey": "^1.1",
                 "hiraeth/core": "^1.1",
                 "hiraeth/icb-inflector": "^1.0"
             },
@@ -735,7 +821,7 @@
                 }
             ],
             "description": "Journey for the Hiraeth Nano-Framework",
-            "time": "2017-06-27 03:19:46"
+            "time": "2017-07-01 21:51:07"
         },
         {
             "name": "hiraeth/monolog",
@@ -783,16 +869,16 @@
         },
         {
             "name": "hiraeth/pb-messages",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/pb-messages.git",
-                "reference": "3916a537de67f4ef2f9dc828564385e192843c41"
+                "reference": "8fc598783bb841615f4b3615e09f34d268878518"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/pb-messages/zipball/3916a537de67f4ef2f9dc828564385e192843c41",
-                "reference": "3916a537de67f4ef2f9dc828564385e192843c41",
+                "url": "https://api.github.com/repos/hiraeth-php/pb-messages/zipball/8fc598783bb841615f4b3615e09f34d268878518",
+                "reference": "8fc598783bb841615f4b3615e09f34d268878518",
                 "shasum": ""
             },
             "require": {
@@ -823,7 +909,7 @@
                 }
             ],
             "description": "Plasticbrain Messages for the Hiraeth Nano-Framework",
-            "time": "2017-06-17 17:19:38"
+            "time": "2017-08-01 05:23:57"
         },
         {
             "name": "hiraeth/psysh",
@@ -919,16 +1005,16 @@
         },
         {
             "name": "hiraeth/twig",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/twig.git",
-                "reference": "9f948f5cd87a3602f738459446551c22e08f8682"
+                "reference": "007f38aba3df160e2d89187f3a64235b5573e01e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/9f948f5cd87a3602f738459446551c22e08f8682",
-                "reference": "9f948f5cd87a3602f738459446551c22e08f8682",
+                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/007f38aba3df160e2d89187f3a64235b5573e01e",
+                "reference": "007f38aba3df160e2d89187f3a64235b5573e01e",
                 "shasum": ""
             },
             "require": {
@@ -964,7 +1050,7 @@
                 }
             ],
             "description": "Twig for the Hiraeth Nano-Framework",
-            "time": "2017-06-22 07:43:52"
+            "time": "2017-07-26 04:22:19"
         },
         {
             "name": "icanboogie/inflector",
@@ -1076,16 +1162,16 @@
         },
         {
             "name": "imarc/checkpoint",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imarc/checkpoint.git",
-                "reference": "e8f018dafc57e23f7d60c1103604da599d072937"
+                "reference": "bd5899940612740515f57222dba4ceb889d7cb08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imarc/checkpoint/zipball/e8f018dafc57e23f7d60c1103604da599d072937",
-                "reference": "e8f018dafc57e23f7d60c1103604da599d072937",
+                "url": "https://api.github.com/repos/imarc/checkpoint/zipball/bd5899940612740515f57222dba4ceb889d7cb08",
+                "reference": "bd5899940612740515f57222dba4ceb889d7cb08",
                 "shasum": ""
             },
             "require": {
@@ -1121,7 +1207,7 @@
             "keywords": [
                 "validation"
             ],
-            "time": "2017-06-02 22:44:56"
+            "time": "2017-07-05 23:51:47"
         },
         {
             "name": "imarc/opus",
@@ -1377,16 +1463,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.6",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1"
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0808939f81c1347a3c8a82a5925385a08074b0f1",
-                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4d4896e553f2094e657fe493506dc37c509d4e2b",
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b",
                 "shasum": ""
             },
             "require": {
@@ -1424,7 +1510,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-06-28 20:53:48"
+            "time": "2017-07-28 14:45:09"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -1567,16 +1653,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.8",
+            "version": "v0.8.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
+                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/b193cd020e8c6b66cea6457826ae005e94e6d2c0",
+                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0",
                 "shasum": ""
             },
             "require": {
@@ -1636,7 +1722,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-24 06:16:19"
+            "time": "2017-07-29 19:30:02"
         },
         {
             "name": "rdlowrey/auryn",
@@ -1845,16 +1931,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.2",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "70d2a29b2911cbdc91a7e268046c395278238b2e"
+                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/70d2a29b2911cbdc91a7e268046c395278238b2e",
-                "reference": "70d2a29b2911cbdc91a7e268046c395278238b2e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b0878233cb5c4391347e5495089c7af11b8e6201",
+                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201",
                 "shasum": ""
             },
             "require": {
@@ -1910,20 +1996,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-02 19:24:58"
+            "time": "2017-07-29 21:27:59"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.2",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "e9c50482841ef696e8fa1470d950a79c8921f45d"
+                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/e9c50482841ef696e8fa1470d950a79c8921f45d",
-                "reference": "e9c50482841ef696e8fa1470d950a79c8921f45d",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
+                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
                 "shasum": ""
             },
             "require": {
@@ -1966,7 +2052,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-01 21:01:25"
+            "time": "2017-07-28 15:27:31"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2029,16 +2115,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.2",
+            "version": "v3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "347c4247a3e40018810b476fcd5dec36d46d08dc"
+                "reference": "b2623bccb969ad595c2090f9be498b74670d0663"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/347c4247a3e40018810b476fcd5dec36d46d08dc",
-                "reference": "347c4247a3e40018810b476fcd5dec36d46d08dc",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b2623bccb969ad595c2090f9be498b74670d0663",
+                "reference": "b2623bccb969ad595c2090f9be498b74670d0663",
                 "shasum": ""
             },
             "require": {
@@ -2093,7 +2179,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-06-02 09:10:29"
+            "time": "2017-07-28 06:06:09"
         },
         {
             "name": "twig/twig",
@@ -2213,9 +2299,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.9",
+            "alias_normalized": "1.9.0.0",
+            "version": "9999999-dev",
+            "package": "dotink/journey"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dotink/journey": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

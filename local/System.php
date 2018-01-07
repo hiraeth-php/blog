@@ -141,6 +141,15 @@ class System
 	 */
 	public function setup(Users $users, Request $request)
 	{
+		foreach ([
+			'/articles/2017/06/26/from-zero-to-routing-in3-packages'
+			=> '/articles/2017/06/26/from-zero-to-routing-in-3-packages'
+		] as $path => $target) {
+			if ($request->getUri()->getPath() == $path) {
+				$this->redirect($target, 301);
+			}
+		}
+
 		$path  = $request->getUri()->getPath();
 		$query = $request->getUri()->getQuery();
 
