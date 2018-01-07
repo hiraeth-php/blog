@@ -1,36 +1,91 @@
+;
 ; The character set to use
+;
 charset = utf-8
 
-; Cache directory to store the compiled templates
+;
+; Cache directory to store the compiled templates.
+;
+; This will be relative to the application root.  Caching itself will only be used of the environment variable
+; `CACHING` is not set to 0.  If caching is enabled, this cache may need to be manually removed in order for changes
+; to templates to be immediately visible.
+;
 cache_path = "writable/cache/twig"
 
-; If true, twig will error when variables are not available
-strict = true
+;
+; Whether twig should use strict variables.
+;
+; Strict variables basically mean that if a variable is not defined it will throw an error.  If strict this value is
+; set to `null` then the default behavior will depend on the `DEBUG` environment variable.
+;
+strict = null
+
+
+;
+; A [twig] section can be added to any configuration file to add paths, filters, globals, or extensions.  Note,
+; however, that conflicts will not be automstically resolved, so if two separate [twig] configurations provide a
+; conflicting key, twig may complain.
+;
 
 [twig]
-paths = {
-	"pages": "public",
-	"layouts": "templates/layouts",
-	"partials": "templates/partials"
-;	"templates": "templates"
-}
 
-; Filters
-filters = {
-;	"md5": {
-;		"target": "md5",
-;		"options": {}
-;	}
-}
+	;
+	; Paths is a list of aliases to paths (relative to the application root) where templates can be found.  In twig
+	; an alias begins with an `@` symbol, so `@pages/index.html` would resolve to `<app_root>/public/index.html` if
+	; the "pages" path was configured to "public" (which is default).  The `Hiraeth\Twig\PageHandler` will attempt to
+	; resolve using the `@pages` alias, however, other aliases can be added for partials or for more direct use with
+	; the twig environment.
+	;
+
+	paths = {
+  ;	"templates": "templates",
+		"pages": "public",
+		"layouts": "templates/layouts",
+		"partials": "templates/partials"
+	}
+
+	;
+	; Filters
+	;
+
+	filters = {
+	;	"md5": {
+	;		"target": "md5",
+	;		"options": {}
+	;	}
+	}
+
+	;
+	; Globals
+	;
+
+	globals = {
+	;	"messaging": "Acme\\Flash\\Messaging"
+	}
+
+	;
+	; Extensions
+	;
+
+	extensions = [
+	;	"Twig_Extension_Debug"
+	]
+
+;
+; The `[application]` section will automatically register twig related delegates with the dependency injector.  You
+; can add additional twig related delegates or custom delegates below, but for most users the default should be fine.
+;
 
 [application]
-delegates = [
-	"Hiraeth\\Twig\\EnvironmentDelegate",
-	"Hiraeth\\Twig\\FilesystemLoaderDelegate"
-;	"Hiraeth\\Twig\\ChainLoaderDelegate",
-]
+
+	delegates = [
+		"Hiraeth\\Twig\\EnvironmentDelegate",
+	;	"Hiraeth\\Twig\\ChainLoaderDelegate",
+		"Hiraeth\\Twig\\FilesystemLoaderDelegate"
+	]
 
 [middleware]
-queue = [
-	"Hiraeth\\Twig\\RelayMiddleware"
-]
+
+	queue = [
+		"Hiraeth\\Twig\\RelayMiddleware"
+	]

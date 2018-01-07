@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd64e329abf6e6c6e0cd4606d10023a4",
     "content-hash": "e2160476faf5ae514c61a7daef7df790",
     "packages": [
         {
@@ -38,7 +37,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24 07:27:01"
+            "time": "2014-10-24T07:27:01+00:00"
         },
         {
             "name": "dotink/flourish-collection",
@@ -95,7 +94,7 @@
             "keywords": [
                 "iterator"
             ],
-            "time": "2015-05-07 06:18:59"
+            "time": "2015-05-07T06:18:59+00:00"
         },
         {
             "name": "dotink/flourish-core",
@@ -145,20 +144,20 @@
                 "error handling",
                 "exception handling"
             ],
-            "time": "2015-04-22 06:09:18"
+            "time": "2015-04-22T06:09:18+00:00"
         },
         {
             "name": "dotink/jin",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dotink/jin.git",
-                "reference": "7c9fb4555c21dd4011a37c86db6484bf3f5c504d"
+                "reference": "54df8c688c9962093fb38000de9b5ccf70be9ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dotink/jin/zipball/7c9fb4555c21dd4011a37c86db6484bf3f5c504d",
-                "reference": "7c9fb4555c21dd4011a37c86db6484bf3f5c504d",
+                "url": "https://api.github.com/repos/dotink/jin/zipball/54df8c688c9962093fb38000de9b5ccf70be9ad6",
+                "reference": "54df8c688c9962093fb38000de9b5ccf70be9ad6",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +188,7 @@
             "keywords": [
                 "keyword"
             ],
-            "time": "2017-06-08 08:42:18"
+            "time": "2018-01-07T05:25:48+00:00"
         },
         {
             "name": "dotink/journey",
@@ -197,7 +196,7 @@
             "source": {
                 "type": "git",
                 "url": "/home/matt/Dropbox/Code/dotink/journey",
-                "reference": "0d58d24d3d6a5155be37e1ec4011d43dc0ad31fb"
+                "reference": "c270df8ea0dd87453d59881cafeaa5913c903370"
             },
             "require": {
                 "nikic/fast-route": "^1.2"
@@ -219,24 +218,27 @@
                 }
             ],
             "description": "Journey is a wrapper for FastRoute which supplies missing functionality",
-            "time": "2017-08-03 06:08:32"
+            "time": "2017-11-01T07:43:15+00:00"
         },
         {
             "name": "erusev/parsedown",
-            "version": "1.6.3",
+            "version": "1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "728952b90a333b5c6f77f06ea9422b94b585878d"
+                "reference": "fbe3fe878f4fe69048bb8a52783a09802004f548"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/728952b90a333b5c6f77f06ea9422b94b585878d",
-                "reference": "728952b90a333b5c6f77f06ea9422b94b585878d",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/fbe3fe878f4fe69048bb8a52783a09802004f548",
+                "reference": "fbe3fe878f4fe69048bb8a52783a09802004f548",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -261,7 +263,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2017-05-14 14:47:48"
+            "time": "2017-11-14T20:44:03+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -308,20 +310,20 @@
             "keywords": [
                 "html"
             ],
-            "time": "2017-06-03 02:28:16"
+            "time": "2017-06-03T02:28:16+00:00"
         },
         {
             "name": "filp/whoops",
-            "version": "2.1.9",
+            "version": "2.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "b238974e1c7cc1859b0c16ddc1c02ecb70ecc07f"
+                "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/b238974e1c7cc1859b0c16ddc1c02ecb70ecc07f",
-                "reference": "b238974e1c7cc1859b0c16ddc1c02ecb70ecc07f",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
+                "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
                 "shasum": ""
             },
             "require": {
@@ -330,7 +332,7 @@
             },
             "require-dev": {
                 "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "^4.8 || ^5.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
                 "symfony/var-dumper": "^2.6 || ^3.0"
             },
             "suggest": {
@@ -366,10 +368,10 @@
                 "exception",
                 "handling",
                 "library",
-                "whoops",
-                "zf2"
+                "throwable",
+                "whoops"
             ],
-            "time": "2017-06-03 18:33:07"
+            "time": "2017-11-23T18:22:44+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -434,20 +436,20 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20 17:10:46"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "hiraeth/adr",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/adr.git",
-                "reference": "923a3eddd2a216727cb6629e0c555857722ab4e8"
+                "reference": "5eae9470bb3c7b294d77410d3c4005d699cd3d56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/adr/zipball/923a3eddd2a216727cb6629e0c555857722ab4e8",
-                "reference": "923a3eddd2a216727cb6629e0c555857722ab4e8",
+                "url": "https://api.github.com/repos/hiraeth-php/adr/zipball/5eae9470bb3c7b294d77410d3c4005d699cd3d56",
+                "reference": "5eae9470bb3c7b294d77410d3c4005d699cd3d56",
                 "shasum": ""
             },
             "type": "opus-package",
@@ -475,7 +477,7 @@
                 }
             ],
             "description": "Acton-Domain-Responder baseline for the Hiraeth Nano-Framework",
-            "time": "2017-07-27 18:38:22"
+            "time": "2017-11-09T16:40:47+00:00"
         },
         {
             "name": "hiraeth/auth",
@@ -519,7 +521,7 @@
                 }
             ],
             "description": "RBAC/ACL auth for the Hiraeth Nano-Framework",
-            "time": "2017-06-22 06:17:14"
+            "time": "2017-06-22T06:17:14+00:00"
         },
         {
             "name": "hiraeth/checkpoint",
@@ -563,7 +565,7 @@
                 }
             ],
             "description": "Checkpoint for the Hiraeth Nano-Framework",
-            "time": "2017-06-22 06:17:30"
+            "time": "2017-06-22T06:17:30+00:00"
         },
         {
             "name": "hiraeth/console",
@@ -603,20 +605,20 @@
                 }
             ],
             "description": "Console commands for the Hiraeth Nano-Framework",
-            "time": "2017-06-22 06:17:46"
+            "time": "2017-06-22T06:17:46+00:00"
         },
         {
             "name": "hiraeth/core",
-            "version": "1.1.3",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/core.git",
-                "reference": "4691aecd24fd6ff86f562e97e67cd1fe70e96420"
+                "reference": "623b4d46e510cd2ccd2dc8b5bc28b7e451804dd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/4691aecd24fd6ff86f562e97e67cd1fe70e96420",
-                "reference": "4691aecd24fd6ff86f562e97e67cd1fe70e96420",
+                "url": "https://api.github.com/repos/hiraeth-php/core/zipball/623b4d46e510cd2ccd2dc8b5bc28b7e451804dd5",
+                "reference": "623b4d46e510cd2ccd2dc8b5bc28b7e451804dd5",
                 "shasum": ""
             },
             "require": {
@@ -643,7 +645,7 @@
                 }
             ],
             "description": "Core classes for the Hiraeth Nano-Framework",
-            "time": "2017-08-01 08:20:00"
+            "time": "2017-12-31T04:01:10+00:00"
         },
         {
             "name": "hiraeth/guzzle-http",
@@ -687,7 +689,7 @@
                 }
             ],
             "description": "Guzzle PSR7 for the Hiraeth Nano-Framework",
-            "time": "2017-06-04 05:01:55"
+            "time": "2017-06-04T05:01:55+00:00"
         },
         {
             "name": "hiraeth/htmlpurifier",
@@ -731,7 +733,7 @@
                 }
             ],
             "description": "HTMLPurifier for the Hiraeth Nano-Framework",
-            "time": "2017-08-01 08:26:05"
+            "time": "2017-08-01T08:26:05+00:00"
         },
         {
             "name": "hiraeth/icb-inflector",
@@ -775,24 +777,24 @@
                 }
             ],
             "description": "ICanBoogie Inflector for the Hiraeth Nano-Framework",
-            "time": "2017-06-22 06:18:01"
+            "time": "2017-06-22T06:18:01+00:00"
         },
         {
             "name": "hiraeth/journey",
-            "version": "1.0.4",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/journey.git",
-                "reference": "fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f"
+                "reference": "08f95c9a9f9ebaf706bfa8e7084ba66502c88940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/journey/zipball/fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f",
-                "reference": "fe519f23f19a2f5be236a16ede3fb5aea1d1aa6f",
+                "url": "https://api.github.com/repos/hiraeth-php/journey/zipball/08f95c9a9f9ebaf706bfa8e7084ba66502c88940",
+                "reference": "08f95c9a9f9ebaf706bfa8e7084ba66502c88940",
                 "shasum": ""
             },
             "require": {
-                "dotink/journey": "^1.1",
+                "dotink/journey": "^1.4",
                 "hiraeth/core": "^1.1",
                 "hiraeth/icb-inflector": "^1.0"
             },
@@ -821,7 +823,7 @@
                 }
             ],
             "description": "Journey for the Hiraeth Nano-Framework",
-            "time": "2017-07-01 21:51:07"
+            "time": "2017-11-01T07:23:34+00:00"
         },
         {
             "name": "hiraeth/monolog",
@@ -865,7 +867,7 @@
                 }
             ],
             "description": "Monolog for the Hiraeth Nano-Framework",
-            "time": "2017-05-30 01:11:39"
+            "time": "2017-05-30T01:11:39+00:00"
         },
         {
             "name": "hiraeth/pb-messages",
@@ -909,7 +911,7 @@
                 }
             ],
             "description": "Plasticbrain Messages for the Hiraeth Nano-Framework",
-            "time": "2017-08-01 05:23:57"
+            "time": "2017-08-01T05:23:57+00:00"
         },
         {
             "name": "hiraeth/psysh",
@@ -954,20 +956,20 @@
                 }
             ],
             "description": "PsySH for the Hiraeth Nano-Framework",
-            "time": "2017-06-11 08:29:46"
+            "time": "2017-06-11T08:29:46+00:00"
         },
         {
             "name": "hiraeth/relay",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/relay.git",
-                "reference": "cec00c9b9d8f726b10745e165f446043dc8f099a"
+                "reference": "1517820744aefc9e0b51ed7e9843821fcc8b9b3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/relay/zipball/cec00c9b9d8f726b10745e165f446043dc8f099a",
-                "reference": "cec00c9b9d8f726b10745e165f446043dc8f099a",
+                "url": "https://api.github.com/repos/hiraeth-php/relay/zipball/1517820744aefc9e0b51ed7e9843821fcc8b9b3c",
+                "reference": "1517820744aefc9e0b51ed7e9843821fcc8b9b3c",
                 "shasum": ""
             },
             "require": {
@@ -1001,20 +1003,20 @@
                 }
             ],
             "description": "Relay for the Hiraeth Nano-Framework",
-            "time": "2017-06-27 04:02:12"
+            "time": "2017-08-25T22:38:42+00:00"
         },
         {
             "name": "hiraeth/twig",
-            "version": "1.3.2",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hiraeth-php/twig.git",
-                "reference": "007f38aba3df160e2d89187f3a64235b5573e01e"
+                "reference": "d748d16f7b86026b43375a6ec121643fbdda704c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/007f38aba3df160e2d89187f3a64235b5573e01e",
-                "reference": "007f38aba3df160e2d89187f3a64235b5573e01e",
+                "url": "https://api.github.com/repos/hiraeth-php/twig/zipball/d748d16f7b86026b43375a6ec121643fbdda704c",
+                "reference": "d748d16f7b86026b43375a6ec121643fbdda704c",
                 "shasum": ""
             },
             "require": {
@@ -1050,7 +1052,7 @@
                 }
             ],
             "description": "Twig for the Hiraeth Nano-Framework",
-            "time": "2017-07-26 04:22:19"
+            "time": "2017-12-31T03:59:13+00:00"
         },
         {
             "name": "icanboogie/inflector",
@@ -1102,7 +1104,7 @@
                 "singularize",
                 "underscore"
             ],
-            "time": "2017-06-30 13:16:14"
+            "time": "2017-06-30T13:16:14+00:00"
         },
         {
             "name": "imarc/auth",
@@ -1158,7 +1160,7 @@
                 "auth",
                 "rbac"
             ],
-            "time": "2017-03-10 17:12:38"
+            "time": "2017-03-10T17:12:38+00:00"
         },
         {
             "name": "imarc/checkpoint",
@@ -1207,7 +1209,7 @@
             "keywords": [
                 "validation"
             ],
-            "time": "2017-07-05 23:51:47"
+            "time": "2017-07-05T23:51:47+00:00"
         },
         {
             "name": "imarc/opus",
@@ -1251,7 +1253,7 @@
             "keywords": [
                 "package management"
             ],
-            "time": "2016-11-29 16:05:36"
+            "time": "2016-11-29T16:05:36+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1294,7 +1296,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08 15:00:19"
+            "time": "2014-04-08T15:00:19+00:00"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1338,7 +1340,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20 18:58:01"
+            "time": "2015-04-20T18:58:01+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1416,7 +1418,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-06-19 01:22:40"
+            "time": "2017-06-19T01:22:40+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1459,20 +1461,20 @@
                 "router",
                 "routing"
             ],
-            "time": "2017-01-19 11:35:12"
+            "time": "2017-01-19T11:35:12+00:00"
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.1.0",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b"
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4d4896e553f2094e657fe493506dc37c509d4e2b",
-                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/579f4ce846734a1cf55d6a531d00ca07a43e3cda",
+                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda",
                 "shasum": ""
             },
             "require": {
@@ -1510,7 +1512,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-07-28 14:45:09"
+            "time": "2017-12-26T14:43:21+00:00"
         },
         {
             "name": "plasticbrain/php-flash-messages",
@@ -1552,7 +1554,7 @@
                 "messages",
                 "session"
             ],
-            "time": "2016-04-01 08:39:38"
+            "time": "2016-04-01T08:39:38+00:00"
         },
         {
             "name": "psr/http-message",
@@ -1602,7 +1604,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -1649,20 +1651,20 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.11",
+            "version": "v0.8.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0"
+                "reference": "5069b70e8c4ea492c2b5939b6eddc78bfe41cfec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/b193cd020e8c6b66cea6457826ae005e94e6d2c0",
-                "reference": "b193cd020e8c6b66cea6457826ae005e94e6d2c0",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/5069b70e8c4ea492c2b5939b6eddc78bfe41cfec",
+                "reference": "5069b70e8c4ea492c2b5939b6eddc78bfe41cfec",
                 "shasum": ""
             },
             "require": {
@@ -1670,14 +1672,13 @@
                 "jakub-onderka/php-console-highlighter": "0.3.*",
                 "nikic/php-parser": "~1.3|~2.0|~3.0",
                 "php": ">=5.3.9",
-                "symfony/console": "~2.3.10|^2.4.2|~3.0",
-                "symfony/var-dumper": "~2.7|~3.0"
+                "symfony/console": "~2.3.10|^2.4.2|~3.0|~4.0",
+                "symfony/var-dumper": "~2.7|~3.0|~4.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~1.11",
                 "hoa/console": "~3.16|~1.14",
-                "phpunit/phpunit": "~4.4|~5.0",
-                "symfony/finder": "~2.1|~3.0"
+                "phpunit/phpunit": "^4.8.35|^5.4.3",
+                "symfony/finder": "~2.1|~3.0|~4.0"
             },
             "suggest": {
                 "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
@@ -1722,7 +1723,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-07-29 19:30:02"
+            "time": "2017-12-28T16:14:16+00:00"
         },
         {
             "name": "rdlowrey/auryn",
@@ -1783,7 +1784,7 @@
                 "dic",
                 "ioc"
             ],
-            "time": "2017-05-15 06:26:46"
+            "time": "2017-05-15T06:26:46+00:00"
         },
         {
             "name": "relay/middleware",
@@ -1817,7 +1818,7 @@
             ],
             "description": "Relay-compatible middleware decorators.",
             "homepage": "https://github.com/relayphp/Relay.Middleware",
-            "time": "2016-12-07 16:45:53"
+            "time": "2016-12-07T16:45:53+00:00"
         },
         {
             "name": "relay/relay",
@@ -1862,20 +1863,20 @@
                 "middleware",
                 "psr-7"
             ],
-            "time": "2015-12-17 18:18:30"
+            "time": "2015-12-17T18:18:30+00:00"
         },
         {
             "name": "respect/validation",
-            "version": "1.1.12",
+            "version": "1.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Respect/Validation.git",
-                "reference": "5ab87d1dd932872f6670136a513f72ff9ea41c67"
+                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/5ab87d1dd932872f6670136a513f72ff9ea41c67",
-                "reference": "5ab87d1dd932872f6670136a513f72ff9ea41c67",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
+                "reference": "ee9e69776a8e875ac1b5b00d8cf2d2c801c42181",
                 "shasum": ""
             },
             "require": {
@@ -1884,7 +1885,6 @@
             },
             "require-dev": {
                 "egulias/email-validator": "~1.2",
-                "malkusch/bav": "~1.0",
                 "mikey179/vfsstream": "^1.5",
                 "phpunit/phpunit": "~4.0",
                 "symfony/validator": "~2.6.9",
@@ -1895,7 +1895,6 @@
                 "ext-bcmath": "Arbitrary Precision Mathematics",
                 "ext-mbstring": "Multibyte String Functions",
                 "fabpot/php-cs-fixer": "Fix PSR2 and other coding style issues",
-                "malkusch/bav": "German bank account validation",
                 "symfony/validator": "Use Symfony validator through Respect\\Validation",
                 "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
             },
@@ -1927,49 +1926,49 @@
                 "validation",
                 "validator"
             ],
-            "time": "2017-03-14 09:44:11"
+            "time": "2018-01-02T21:47:22+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.6",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201"
+                "reference": "8394c8ef121949e8f858f13bc1e34f05169e4e7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b0878233cb5c4391347e5495089c7af11b8e6201",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201",
+                "url": "https://api.github.com/repos/symfony/console/zipball/8394c8ef121949e8f858f13bc1e34f05169e4e7d",
+                "reference": "8394c8ef121949e8f858f13bc1e34f05169e4e7d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
-                "symfony/debug": "~2.8|~3.0",
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/debug": "~2.8|~3.0|~4.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3"
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~3.3",
-                "symfony/dependency-injection": "~3.3",
-                "symfony/event-dispatcher": "~2.8|~3.0",
-                "symfony/filesystem": "~2.8|~3.0",
-                "symfony/http-kernel": "~2.8|~3.0",
-                "symfony/process": "~2.8|~3.0"
+                "symfony/config": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.3|~4.0"
             },
             "suggest": {
                 "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": "",
-                "symfony/filesystem": "",
+                "symfony/lock": "",
                 "symfony/process": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -1996,36 +1995,36 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-29 21:27:59"
+            "time": "2018-01-03T07:37:34+00:00"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.6",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13"
+                "reference": "603b95dda8b00020e4e6e60dc906e7b715b1c245"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/603b95dda8b00020e4e6e60dc906e7b715b1c245",
+                "reference": "603b95dda8b00020e4e6e60dc906e7b715b1c245",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "psr/log": "~1.0"
             },
             "conflict": {
                 "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
             },
             "require-dev": {
-                "symfony/http-kernel": "~2.8|~3.0"
+                "symfony/http-kernel": "~2.8|~3.0|~4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -2052,20 +2051,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-28 15:27:31"
+            "time": "2018-01-03T17:14:19+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.4.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
-                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
@@ -2077,7 +2076,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -2111,24 +2110,24 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-09 14:24:12"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.6",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "b2623bccb969ad595c2090f9be498b74670d0663"
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b2623bccb969ad595c2090f9be498b74670d0663",
-                "reference": "b2623bccb969ad595c2090f9be498b74670d0663",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/545be7e78ccbec43e599f10ff7500d0b09eda9d0",
+                "reference": "545be7e78ccbec43e599f10ff7500d0b09eda9d0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
@@ -2140,12 +2139,13 @@
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
                 "ext-symfony_debug": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -2179,20 +2179,20 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-07-28 06:06:09"
+            "time": "2018-01-03T17:14:19+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eab7c3288ae6603d7d6f92b531626af2b162d1f2",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2245,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-06-07 18:47:58"
+            "time": "2017-09-27T18:10:31+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -2295,7 +2295,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01 10:05:43"
+            "time": "2016-09-01T10:05:43+00:00"
         }
     ],
     "packages-dev": [],

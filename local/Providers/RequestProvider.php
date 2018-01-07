@@ -48,7 +48,10 @@ class RequestProvider
 	public function __invoke($request, Hiraeth\Broker $broker)
 	{
 		ob_start();
-		register_shutdown_function([$this, 'handle']);
+
+		if (!$this->app->getEnvironment('DEBUG')) {
+			register_shutdown_function([$this, 'handle']);
+		}
 
 		$path   = $request->getUri()->getPath();
 		$parts  = explode('/', $path);
@@ -59,7 +62,7 @@ class RequestProvider
 			$action = '/' . $request->getQueryParams()['action'];
 		} elseif ($slug) {
 			$action = '/read';
-		} elseif (substr($request->getUri()->getPath(), -1) == '/') {
+		} elseif (strlen($path) > 1 && substr($path, -1) == '/') {
 			$action = '/index';
 		} else {
 			$action = NULL;

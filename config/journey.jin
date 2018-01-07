@@ -2,7 +2,6 @@ cache_file = writable/cache/routing.cache
 
 parser     = FastRoute\RouteParser\Std
 generator  = FastRoute\DataGenerator\GroupCountBased
-dispatcher = FastRoute\Dispatcher\GroupCountBased
 resolver   = Hiraeth\Journey\BrokerResolver
 
 [journey]
@@ -38,3 +37,10 @@ transformers = {
 ;	"c": "Hiraeth\\Journey\\ClassTransformer",
 ;	"m": "Hiraeth\\Journey\\MethodTransformer"
 }
+
+[application]
+delegates = [
+	"Hiraeth\\Journey\\CollectorDelegate",
+	"Hiraeth\\Journey\\RouterDelegate",
+	"Hiraeth\\Journey\\GCBDispatcherDelegate"
+]
