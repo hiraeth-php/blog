@@ -1,46 +1,58 @@
 cache_file = writable/cache/routing.cache
-
 parser     = FastRoute\RouteParser\Std
 generator  = FastRoute\DataGenerator\GroupCountBased
 resolver   = Hiraeth\Journey\BrokerResolver
 
 [journey]
 
-; The group is a prefix which is used when registering all the routes in this section.
+	;
+	; The group is a prefix which is used when registering all the routes in this section.
+	;
 
-group = ""
+	group = ""
 
-; A list of routes, keyed by a route pattern with the value being a target.  The validity of a target will
-; depend on which resolver is being used.
+	; A list of routes, keyed by a route pattern with the value being a target.  The validity of a target will
+	; depend on which resolver is being used.
 
-routes = {
-	"/": "Hiraeth\\Journey\\WelcomeAction"
-;	"/{class:c}/{method:m}": "{class}Controller::{method}"
-}
+	routes = {
+		; "/{class:c}/{method:m}": "{class}Controller::{method}",
+		"/": "Hiraeth\\Journey\\WelcomeAction"
+	}
 
-; Patterns are strings which map to regular expressions for use with fastroute.  You can define
-; the pattern as the key and the regular expression it maps to as the value.
+	;
+	; Patterns are strings which map to regular expressions for use with fastroute.  You can define
+	; the pattern as the key and the regular expression it maps to as the value.
+	;
 
-patterns = {
-	"!": ".+",
-	"#": "\\d+",
-	"+": "[1-9][0-9]*"
-;	"c": "[a-z\\x7f-\\xff][a-z0-9-\\x7f-\\xff]*",
-;	"m": "[a-z\\x7f-\\xff][a-z0-9-\\x7f-\\xff]*"
-}
+	patterns = {
+		; "c": "[a-z\\x7f-\\xff][a-z0-9-\\x7f-\\xff]*",
+		; "m": "[a-z\\x7f-\\xff][a-z0-9-\\x7f-\\xff]*",
+		"!": ".+",
+		"#": "\\d+",
+		"+": "[1-9][0-9]*"
+	}
 
-; Transformers are used to transform matching URL parameters between their URL form and their
-; argument form.
+	;
+	; Transformers are used to transform matching URL parameters between their URL form and their
+	; argument form.
+	;
 
-transformers = {
-	"!": "Hiraeth\\Journey\\StringTransformer"
-;	"c": "Hiraeth\\Journey\\ClassTransformer",
-;	"m": "Hiraeth\\Journey\\MethodTransformer"
-}
+	transformers = {
+		; "m": "Hiraeth\\Journey\\MethodTransformer",
+		; "c": "Hiraeth\\Journey\\ClassTransformer",
+		"!": "Hiraeth\\Journey\\StringTransformer"
+	}
 
 [application]
-delegates = [
-	"Hiraeth\\Journey\\CollectorDelegate",
-	"Hiraeth\\Journey\\RouterDelegate",
-	"Hiraeth\\Journey\\GCBDispatcherDelegate"
-]
+
+	delegates = [
+		"Hiraeth\\Journey\\CollectorDelegate",
+		"Hiraeth\\Journey\\RouterDelegate",
+		"Hiraeth\\Journey\\GCBDispatcherDelegate"
+	]
+
+[twig]
+
+	globals = {
+		"router": "Journey\\Router"
+	}

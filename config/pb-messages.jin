@@ -1,4 +1,6 @@
+;
 ; CSS classmap provides the CSS classes used (values) for the type of message (keys)
+;
 
 classmap = {
 	"ERROR": "error",
@@ -8,6 +10,17 @@ classmap = {
 }
 
 [application]
-providers = [
-	"Hiraeth\\Messages\\MessagesProvider"
-]
+
+	aliases = {
+		"Plasticbrain\\FlashMessages\\FlashMessages": "Messaging"
+	}
+
+	providers = [
+		"Hiraeth\\Messages\\MessagesProvider"
+	]
+
+[twig]
+
+	globals = {
+		"messaging": "Plasticbrain\\FlashMessages\\FlashMessages"
+	}

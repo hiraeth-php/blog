@@ -1,8 +1,22 @@
-; The locale to use for inflection (en, fr, ...)
+;
+; The locale to use for inflection (en, fr, ...).  This can also be overloaded in the environment
+; variable `LOCALE`.  It is recommended you use the environment variable over this value.
+;
 
 locale = en
 
 [application]
-delegates = [
-	"Hiraeth\\Inflector\\InflectorDelegate"
-]
+
+	aliases = {
+		"ICanBoogie\\Inflector": "Inflector"
+	}
+
+	delegates = [
+		"Hiraeth\\Inflector\\InflectorDelegate"
+	]
+
+[twig]
+
+	globals = {
+		"inflector": "ICanBoogie\\Inflector"
+	}

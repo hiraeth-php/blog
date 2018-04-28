@@ -20,7 +20,6 @@ cache_path = "writable/cache/twig"
 ;
 strict = null
 
-
 ;
 ; A [twig] section can be added to any configuration file to add paths, filters, globals, or extensions.  Note,
 ; however, that conflicts will not be automstically resolved, so if two separate [twig] configurations provide a
@@ -38,14 +37,14 @@ strict = null
 	;
 
 	paths = {
-  ;	"templates": "templates",
 		"pages": "public",
 		"layouts": "templates/layouts",
 		"partials": "templates/partials"
 	}
 
 	;
-	; Filters
+	; Filters- targets can be either an existing function or a class name.  Instances will be
+	; constructed using the dependency injector.
 	;
 
 	filters = {
@@ -56,15 +55,28 @@ strict = null
 	}
 
 	;
-	; Globals
+	; Functions - targets can be either an existing function or a class name.  Instances will be
+	; constructed using the dependency injector.
 	;
 
-	globals = {
-	;	"messaging": "Acme\\Flash\\Messaging"
+	functions = {
+	;	"md5": {
+	;		"target": "md5"
+	;	}
 	}
 
 	;
-	; Extensions
+	; Globals - A list of global variables to class names.  Instances will be constructed using the
+	; depency injector / broker.
+	;
+
+	globals = {
+		"app": "Hiraeth\\Application",
+		"config": "Hiraeth\\Configuration"
+	}
+
+	;
+	; Extensions - A list of extension classes
 	;
 
 	extensions = [
@@ -72,17 +84,23 @@ strict = null
 	]
 
 ;
-; The `[application]` section will automatically register twig related delegates with the dependency injector.  You
-; can add additional twig related delegates or custom delegates below, but for most users the default should be fine.
+; The `[application]` section will automatically register twig related delegates with the dependency
+; injector.  You can add additional twig related delegates or custom delegates below, but for most
+; users the default should be fine.
 ;
 
 [application]
 
 	delegates = [
-		"Hiraeth\\Twig\\EnvironmentDelegate",
 	;	"Hiraeth\\Twig\\ChainLoaderDelegate",
+		"Hiraeth\\Twig\\EnvironmentDelegate",
 		"Hiraeth\\Twig\\FilesystemLoaderDelegate"
 	]
+
+;
+; This is just an example.  Because middleware is ordered, middleware registrations must be
+; centralized, so this would have to be copied to your `relay.jin` file as an example.
+;
 
 [middleware]
 

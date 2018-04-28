@@ -1,16 +1,24 @@
 [application]
-delegates = [
 
-]
+	delegates = [
 
-providers = [
-	"Hiraeth\\App\\RepositoryProvider",
-	"Hiraeth\\App\\RequestProvider",
-	"Hiraeth\\App\\TwigProvider"
-]
+	]
+
+	providers = [
+		"Hiraeth\\App\\RepositoryProvider",
+		"Hiraeth\\App\\RequestProvider",
+		"Hiraeth\\App\\TwigProvider"
+	]
 
 [server]
-php = php
-host = localhost
-port = 8080
-docroot = public
+
+	php = php
+	host = localhost
+	port = 8080
+	docroot = public
+
+[twig]
+
+	globals = {
+		"session": "Hiraeth\\App\\Session"
+	}
